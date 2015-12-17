@@ -13,9 +13,6 @@
 .loaded {
   opacity: 1; }
 
-#builder {
-  margin-left: 375px; }
-
 .code {
   position: fixed;
   right: 0;
@@ -273,3 +270,9 @@ label {
 
 .panel-body {
   padding: 10px 10px 0 10px; }
+
+.toggle-toolbar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 100; }

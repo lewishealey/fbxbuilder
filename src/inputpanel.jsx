@@ -74,6 +74,11 @@ module.exports = React.createClass({
                               <div className="panel-heading">Editable fields</div>
                                 <div className="panel-body">
                                     <div className="row">
+
+                                      <div className="col-md-12">
+                                        <p>Light/Dark logo</p>
+                                        <a className="btn btn-primary" onClick={this.props.toggleLogo}>Toggle light/dark logo</a>
+                                      </div>
                                     
                                       <div className="col-md-12">
                                         <label>Title Text (or used for alt)</label>
@@ -290,6 +295,109 @@ module.exports = React.createClass({
 
                           {/* Top10 Block */}
                           { block.type == "top10" && 
+                            <div className="panel panel-default">
+                              <div className="panel-heading">Editable fields</div>
+                                <div className="panel-body">
+                                    <div className="row">
+                                    
+                                      <div className="col-md-12">
+                                        <label>Product ID</label>
+                                        <input type="text" className="form-control" defaultValue={input.productid} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "productid")} />
+                                      </div>
+
+                                      <div className="col-md-12">
+                                        <label>Text</label>
+                                          <p><textarea type="text" className="form-control" defaultValue={input.text} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "text")} /></p>
+                                      </div>
+
+                                      <div className="col-md-12">
+                                        <div className="panel-sub-heading">Number Style</div>
+                                      </div>
+
+                                      <div className="col-md-6">
+                                        <label>Bg Colour</label>
+                                        <input type="text" className="form-control" defaultValue={input.bgcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "bgcolour")} />
+                                      </div>
+                                      
+                                      <div className="col-md-6">
+                                        <label>Font Colour</label>
+                                          <input type="text" className="form-control" defaultValue={input.fcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "fcolour")} />
+                                      </div>
+                                      
+                                      <div className="col-md-12">
+                                        <div className="panel-sub-heading">Button Style</div>
+                                      </div>
+                                    
+                                    <div className="col-md-6">
+                                      <label>Btn bg colour</label>
+                                      <input type="text" className="form-control" defaultValue={input.btncolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "btncolour")} />
+                                    </div>
+
+                                    <div className="col-md-6">
+                                      <label>Btn text colour</label>
+                                      <input type="text" className="form-control" defaultValue={input.btnfcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "btnfcolour")} />
+                                    </div>
+
+                                    </div>
+                                  </div>
+                              </div>
+
+                            }
+
+
+                          {/* Product Left */}
+                          { block.type == "productleft" && 
+                            <div className="panel panel-default">
+                              <div className="panel-heading">Editable fields</div>
+                                <div className="panel-body">
+                                    <div className="row">
+                                    
+                                      <div className="col-md-12">
+                                        <label>Product ID</label>
+                                        <input type="text" className="form-control" defaultValue={input.productid} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "productid")} />
+                                      </div>
+
+                                      <div className="col-md-12">
+                                        <label>Text</label>
+                                          <p><textarea type="text" className="form-control" defaultValue={input.text} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "text")} /></p>
+                                      </div>
+
+                                      <div className="col-md-12">
+                                        <div className="panel-sub-heading">Number Style</div>
+                                      </div>
+
+                                      <div className="col-md-6">
+                                        <label>Bg Colour</label>
+                                        <input type="text" className="form-control" defaultValue={input.bgcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "bgcolour")} />
+                                      </div>
+                                      
+                                      <div className="col-md-6">
+                                        <label>Font Colour</label>
+                                          <input type="text" className="form-control" defaultValue={input.fcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "fcolour")} />
+                                      </div>
+                                      
+                                      <div className="col-md-12">
+                                        <div className="panel-sub-heading">Button Style</div>
+                                      </div>
+                                    
+                                    <div className="col-md-6">
+                                      <label>Btn bg colour</label>
+                                      <input type="text" className="form-control" defaultValue={input.btncolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "btncolour")} />
+                                    </div>
+
+                                    <div className="col-md-6">
+                                      <label>Btn text colour</label>
+                                      <input type="text" className="form-control" defaultValue={input.btnfcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "btnfcolour")} />
+                                    </div>
+
+                                    </div>
+                                  </div>
+                              </div>
+
+                            }
+
+                          {/* Product Right */}
+                          { block.type == "productright" && 
                             <div className="panel panel-default">
                               <div className="panel-heading">Editable fields</div>
                                 <div className="panel-body">

@@ -12,9 +12,13 @@ var Slice = require('./slice');
 var SliceEnd = require('./sliceend');
 var Feature = require('./feature');
 var ProductLeft = require('./productleft');
+var ProductRight = require('./productright');
 var Footer = require('./footer');
 
 module.exports = React.createClass({
+    componentDidUpdate: function() {
+        console.log("preview " + this.props.toggleLogo);
+    },
     render: function() {
         return (
             <center>
@@ -34,7 +38,8 @@ module.exports = React.createClass({
 
                                                 // Top of the newsletter
                                                 if(block.type == "top") {
-                                                  return <Top key={i} {...block} itc={this.props.data.itc} campaign={this.props.data.analytics} order={i} id={this.props.data.id} showOrder={this.props.showOrder} />
+                                                    console.log(this.props.toggleLogo);
+                                                  return <Top key={i} {...block} itc={this.props.data.itc} campaign={this.props.data.analytics} order={i} id={this.props.data.id} showOrder={this.props.showOrder} logo={this.props.toggleLogo} />
                                                 }
 
                                                 // Hero header section
@@ -65,6 +70,11 @@ module.exports = React.createClass({
                                                 // Product Left
                                                 if(block.type == "productleft") {
                                                   return <ProductLeft key={i} {...block} itc={this.props.data.itc} campaign={this.props.data.analytics} order={i} id={this.props.data.id} showOrder={this.props.showOrder} />
+                                                }
+
+                                                // Product Left
+                                                if(block.type == "productright") {
+                                                  return <ProductRight key={i} {...block} itc={this.props.data.itc} campaign={this.props.data.analytics} order={i} id={this.props.data.id} showOrder={this.props.showOrder} />
                                                 }
 
                                                 // Slice

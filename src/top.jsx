@@ -2,7 +2,6 @@ var React = require('react');
 
 module.exports = React.createClass({
         render: function() {
-
           var componentStyle = {
             textAlign: "center",
             color: this.props.hfcolour,
@@ -25,7 +24,6 @@ module.exports = React.createClass({
             lineHeight: "1"
           };
 
-
           return <table className="top" cellSpacing="0" cellPadding="0" width="100%">
                     <tbody>
                       <tr>
@@ -36,7 +34,7 @@ module.exports = React.createClass({
                                 <tr>
                                   <td>
                                     <center>
-                                      <img src="http://www.firebox.com/firebox.png" className="logo" width="200"/>
+                                      <img src={this.props.toggleLogo ? "http://www.firebox.com/firebox-light.png" : "http://www.firebox.com/firebox.png"} className="logo" width="200"/>
                                     </center>
                                   </td>
                                 </tr>
@@ -54,4 +52,4 @@ module.exports = React.createClass({
                   </table>
         }
 
-      });
+      }); 
