@@ -1,0 +1,108 @@
+{ (block.type == "column" || block.type == "link" || block.type == "text" || block.type == "textop") &&
+                              <div className="col-md-12">
+                                <label>Title Text (or used for alt)</label>
+                                <input type="text" className="form-control" defaultValue={input.title} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "title")} />
+                              </div>
+                            }
+
+                            { (block.type == "hero" || block.type == "column" || block.type == "top10" || block.type == "link" || block.type == "text") && 
+                              <div className="col-md-12">
+                                <label>Text</label>
+                                  <p><textarea type="text" className="form-control" defaultValue={input.text} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "text")} /></p>
+                                </div>
+                            }
+
+                            { (block.type == "hero" || block.type == "column" || block.type == "top10" || block.type == "link" || block.type == "text") && 
+                              [
+                              <div className="col-md-6">
+                                <label>Bg Colour</label>
+                                <input type="text" className="form-control" defaultValue={input.bgcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "bgcolour")} />
+                              </div>
+                              ,
+                              <div className="col-md-6">
+                                <label>Font Colour</label>
+                                  <input type="text" className="form-control" defaultValue={input.fcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "fcolour")} />
+                              </div>
+                              ]
+                            }
+ 
+                            { block.type == "link" && 
+                                <div className="col-md-12">
+                                  <label>Link</label>
+                                  <input type="text" className="form-control" defaultValue={input.link} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "link")} />
+                                </div>
+                            }
+
+                          </div>
+                          </div>
+                        </div>
+
+
+                  { (block.type == "hero" || block.type == "column" || block.type == "top10") && 
+                  [
+                    <div className="panel panel-default">
+                      <div className="panel-heading">Button Style</div>
+                      <div className="panel-body">
+                          <div className="row">
+                          
+                            <div className="col-md-6">
+                              <label>Btn bg colour</label>
+                              <input type="text" className="form-control" defaultValue={input.btncolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "btncolour")} />
+                            </div>
+
+                            <div className="col-md-6">
+                              <label>Btn text colour</label>
+                              <input type="text" className="form-control" defaultValue={input.btnfcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "btnfcolour")} />
+                            </div>
+
+                          </div>
+                        </div>
+                    </div>,
+
+                    <div className="panel panel-default">
+                      <div className="panel-heading">Media</div>
+                        <div className="panel-body">
+                          <div className="row">
+                            <div className="col-md-12">
+                              <label>Image url</label>
+                              <input type="text" className="form-control" defaultValue={input.image} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "image")} />
+                            </div>
+
+                            <div className="col-md-12">
+                              <label>Product ID</label>
+                              <input type="text" className="form-control" defaultValue={input.productid} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "productid")} />
+                            </div>
+
+                            <div className="col-md-12">
+                              <label>Link</label>
+                              <input type="text" className="form-control" defaultValue={input.link} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "link")} />
+                            </div>
+
+                          </div>
+                        </div>
+                    </div>
+                  ]
+
+                                 </div>
+ 
+                                 <div className="intro__section">
+-                                    crapwrap
++                                    <div className="intro__crapwrap">
++
++                                        <div className="intro__crapwrap__section-small">
++                                            <img src="//media.firebox.com/i/product/wrapping.png" />
++                                        </div>
++
++                                        <div className="intro__crapwrap__section-large">
++                                            <h4>Gift wrap available £3.95</h4>
++                                            <h4>CRAPWRAP™ or Goldenboy Giftwrap</h4>
++                                        </div>
++
++                                        <div className="intro__crapwrap__section-medium">
++                                            <img src="//media.firebox.com/i/product/watch-battle.png" />
++                                        </div>
++
++                                    </div>
+                                 </div>
+ 
+                             </div>

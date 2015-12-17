@@ -1,0 +1,352 @@
+{
+  "id": "01",
+  "name": "First Newsletter",
+  "type": "newsletter",
+  "itc": "000",
+  "analytics": "HELLO",
+  "brief": "Write your brief here...",
+  "htitle": "Pebble Time Smartwatch and new products this week",
+  "hfcolour": "#FFF",
+  "hbgcolour": "#343434",
+  "blocks": [
+    {
+      "title": "Header Text",
+      "type": "textop",
+      "inputs": [
+        {
+          "order": "1",
+          "bgcolour": "#EFEFEF",
+          "fcolour": "#343434",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "",
+          "text": "Free UK Delivery for orders over £50",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    },
+    {
+      "title": "Top 50",
+      "type": "top50",
+      "inputs": [
+        {
+          "order": "2",
+          "bgcolour": "#E5A800",
+          "fcolour": "#343434",
+          "btncolour": "#343434",
+          "btnfcolour": "#FFFFFF",
+          "image": "http://media.firebox.com/pic/p7418_column_grid_12.jpg",
+          "title": "",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a mi consequat, eleifend felis eget, placerat enim",
+          "link": "",
+          "productid": "7418",
+          "productname": "Middle Class Problems",
+          "productprice": "£9.99",
+          "productlink": "http://www.firebox.com/product/7418/"
+        }
+      ]
+    },
+    {
+      "title": "Hero",
+      "type": "hero",
+      "inputs": [
+        {
+          "order": "3",
+          "bgcolour": "#FFFFFF",
+          "fcolour": "#343434",
+          "btncolour": "#343434",
+          "btnfcolour": "#FFFFFF",
+          "image": "http://media.firebox.com/i/home/feature/2x2/naga_vodka.jpg",
+          "title": "Lorem ipsum dolor sit amet",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a mi consequat, eleifend felis eget, placerat enim",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    },
+    {
+      "title": "Link",
+      "type": "link",
+      "inputs": [
+        {
+          "order": "4",
+          "bgcolour": "#EFEFEF",
+          "fcolour": "#343434",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet",
+          "text": "",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    },
+    {
+      "title": "Declaration",
+      "type": "text",
+      "inputs": [
+        {
+          "order": "5",
+          "bgcolour": "#EFEFEF",
+          "fcolour": "#343434",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    },
+    {
+      "title": "Row 1",
+      "type": "column",
+      "inputs": [
+        {
+          "order": "5",
+          "bgcolour": "#FFFFFF",
+          "fcolour": "#343434",
+          "btncolour": "#343434",
+          "btnfcolour": "#FFFFFF",
+          "image": "",
+          "title": "",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "link": "",
+          "productid": "7260",
+          "productname": "BB8",
+          "productprice": "£109.99",
+          "productlink": "http://www.firebox.com/product/7260/"
+        },
+        {
+          "order": "6",
+          "bgcolour": "#FFFFFF",
+          "fcolour": "#343434",
+          "btncolour": "#343434",
+          "btnfcolour": "#FFFFFF",
+          "image": "",
+          "title": "",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "link": "",
+          "productid": "7260",
+          "productname": "BB8",
+          "productprice": "£109.99",
+          "productlink": "http://www.firebox.com/product/7260/"
+        }
+      ]
+    },
+    {
+      "title": "Slice",
+      "type": "slice",
+      "inputs": [
+        {
+          "order": "7",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "https://placeimg.com/640/480/any",
+          "title": "",
+          "text": "",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    },
+    {
+      "title": "Slice End",
+      "type": "sliceend",
+      "inputs": [
+        {
+          "order": "8",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "https://placeimg.com/640/480/any",
+          "title": "",
+          "text": "",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    },
+    {
+      "title": "Feature list",
+      "type": "feature",
+      "inputs": [
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        },
+        {
+          "order": "10",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    }
+  ]
+}

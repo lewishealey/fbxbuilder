@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'sofia_pro_regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('sofia_pro_regular'), local('sofia_pro_regular'), url(http://media.firebox.com/fonts/sofiapro_regular_macroman/SofiaProRegular-webfont.woff2) format('woff2');
+  line-height: 0.8em;
+}

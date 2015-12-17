@@ -1,0 +1,21 @@
+{
+      "title": "Slice",
+      "type": "slice",
+      "inputs": [
+        {
+          "order": "7",
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "https://placeimg.com/640/480/any",
+          "title": "",
+          "text": "",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    }

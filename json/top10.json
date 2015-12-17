@@ -1,0 +1,20 @@
+{
+      "title": "Top 10",
+      "type": "top10",
+      "inputs": [
+        {
+          "bgcolour": "#E5A800",
+          "fcolour": "#343434",
+          "btncolour": "#343434",
+          "btnfcolour": "#FFFFFF",
+          "image": "http://media.firebox.com/pic/p7418_column_grid_12.jpg",
+          "title": "",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a mi consequat, eleifend felis eget, placerat enim",
+          "link": "",
+          "productid": "7418",
+          "productname": "Middle Class Problems",
+          "productprice": "£9.99",
+          "productlink": "http://www.firebox.com/product/7418/"
+        }
+      ]
+    }

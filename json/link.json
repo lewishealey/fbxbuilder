@@ -1,0 +1,21 @@
+{
+      "title": "Link",
+      "type": "link",
+      "inputs": [
+        {
+          "order": "4",
+          "bgcolour": "#EFEFEF",
+          "fcolour": "#343434",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet",
+          "text": "",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    }

@@ -1,0 +1,35 @@
+{
+         "blocks" : [
+            {
+              "title": "Free delivery notice",
+              "type": "top50",
+                "inputs": [
+                  {
+                  "order": "1",
+                  "bgcolour": "#EFEFEF",
+                  "fcolour": "#000",
+                  "btncolour": "#343434",
+                  "btnfcolour": "#FFFFFF",
+                  "imageUrl": "",
+                  "text": "Free UK Delivery for orders over £50",
+                  "link": "",
+                  "id" : "7260",
+                  "titleText": ""
+                  },
+                  {
+                  "order": "2",
+                  "bgcolour": "#EFEFEF",
+                  "fcolour": "#000",
+                  "btncolour": "#343434",
+                  "btnfcolour": "#FFFFFF",
+                  "imageUrl": "",
+                  "text": "Free UK Delivery for orders over £50",
+                  "link": "",
+                  "id" : "7260",
+                  "titleText": ""
+                  }
+                ]
+            }
+        ]
+
+}

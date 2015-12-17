@@ -1,0 +1,21 @@
+{
+      "title": "Hero",
+      "type": "hero",
+      "inputs": [
+        {
+          "order": "3",
+          "bgcolour": "#FFFFFF",
+          "fcolour": "#343434",
+          "btncolour": "#343434",
+          "btnfcolour": "#FFFFFF",
+          "image": "http://media.firebox.com/i/home/feature/2x2/naga_vodka.jpg",
+          "title": "Lorem ipsum dolor sit amet",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a mi consequat, eleifend felis eget, placerat enim",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    }

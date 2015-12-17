@@ -1,0 +1,21 @@
+{
+      "title": "Declaration",
+      "type": "text",
+      "inputs": [
+        {
+          "order": "5",
+          "bgcolour": "#EFEFEF",
+          "fcolour": "#343434",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    }
