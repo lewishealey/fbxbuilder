@@ -38,9 +38,11 @@ module.exports = React.createClass({
                                                     <p style={{margin: "0 0 10px 0", fontSize: "13px", color: this.props.inputs[0].fcolour}}>
                                                         {this.props.inputs[0].text}
                                                     </p>
+                                                    {this.props.inputs[0].productprice &&
                                                     <p style={{margin: "0 0 15px 0", fontSize: "13px", color: this.props.inputs[0].fcolour}}>
                                                         {this.props.inputs[0].productprice}
                                                     </p>
+                                                    }
                                                     <a target="_blank" href={this.props.inputs[0].link + "?itc=" + this.props.itc + "&utm_source=newsletter&utm_medium=email&utm_campaign=" + this.props.campaign + "&src_t=nwt&src_id=" + this.props.id + "&via=NL_row&NL_pos=" + this.props.order} style={{display: "inline-block", padding: "10px 30px", backgroundColor: "#343434", color: "#fff", borderRadius: "2px", textDecoration: "none", margin: "0"}} >
                                                         BUY NOW</a>
                                                     </span>
