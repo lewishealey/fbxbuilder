@@ -10,7 +10,7 @@ module.exports = React.createClass({
 
             <div className="sidebar__card">
                 <div className="sidebar__card-title">
-              <h4>Enter your brief details</h4>
+              <h4>Newsletter {this.props.config.data ? this.props.config.data.id : null} </h4>
             </div>
 
 
@@ -20,19 +20,23 @@ module.exports = React.createClass({
               <div className="panel-heading">Edit your fields now</div>
                 <div className="panel-body">
                     <div className="row">
+
+                      {this.props.config.data &&
                     
-                      <div className="col-md-12">
+                        <div className="col-md-12">
 
-                        <label>Name</label>
-                        <input type="text" className="form-control" defaultValue={this.props.data.name} onChange={this.onHeaderChange.bind(this, "name")} />
+                          <label>Name</label>
+                          <input type="text" className="form-control" defaultValue={this.props.config.data.name ? this.props.config.data.name : "Enter newsletter name"} onChange={this.onHeaderChange.bind(this, "name")} />
 
-                        <label>ITC ID</label>
-                        <input type="text" className="form-control" defaultValue={this.props.data.itc} onChange={this.onHeaderChange.bind(this, "itc")} />
+                          <label>ITC ID</label>
+                          <input type="text" className="form-control" defaultValue={this.props.config.data.itc ? this.props.config.data.itc : "Enter ITC"} onChange={this.onHeaderChange.bind(this, "itc")} />
 
-                        <label>Brief</label>
-                        <textarea type="text" className="form-control" defaultValue={this.props.data.brief} onChange={this.onHeaderChange.bind(this, "brief")} rows="6" />
-                      
-                      </div>
+                          <label>Brief</label>
+                          <textarea type="text" className="form-control" defaultValue={this.props.config.data.brief ? this.props.config.data.brief : "Enter your  brief"} onChange={this.onHeaderChange.bind(this, "brief")} rows="10" />
+                        
+                        </div>
+
+                      }
 
                       <div className="col-md-12">
 

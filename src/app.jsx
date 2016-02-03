@@ -35,7 +35,8 @@ var Builder = React.createClass({
       currentTab: 1,
       currentOrder: 1,
       showOrder: false,
-      showToolbar: true
+      showToolbar: true,
+      config: false
     };
   },
 
@@ -59,7 +60,6 @@ var Builder = React.createClass({
       // Get JSON file
       Jquery.getJSON("/json/config.json", function(result){
         this.setState({ config: result });
-        console.log(result);
       }.bind(this))
       .error(function() { console.log("error getting config JSON"); });
 
@@ -91,20 +91,13 @@ var Builder = React.createClass({
   onHeaderChange: function(inputField, inputValue) {
 
     // Changing the headers rather than blocks
-    var data = this.state.data;
+    var config = this.state.config;
 
-    if(inputField == "htitle") { data.htitle = inputValue; }
-    if(inputField == "itc") { data.itc = inputValue; }
-    if(inputField == "campaign") { data.analytics = inputValue; }
-    if(inputField == "brief") { data.brief = inputValue; }
-    if(inputField == "hfcolour") { data.hfcolour = inputValue; }
-    if(inputField == "name") { data.name = inputValue; }
-    if(inputField == "hbgcolour") { data.hbgcolour = inputValue;}
-    if(inputField == "toggle") { data.alt_logo = ! data.alt_logo;}
+    config.data[inputField] = inputValue; 
 
     // Set new data after changes
     this.setState({ 
-      data: data 
+      config: config
     });
 
   },
@@ -202,7 +195,7 @@ var Builder = React.createClass({
               </div>,
 
               <div className={"sidebar " + ((this.state.currentTab == 0)? 'active' : '')}>
-                <BriefPanel data={this.state.data} onDataChange={this.onDataChange} onHeaderChange={this.onHeaderChange} />
+                <BriefPanel data={this.state.data} config={this.state.config} onDataChange={this.onDataChange} onHeaderChange={this.onHeaderChange} />
               </div>,
 
               <div className={"sidebar " + ((this.state.currentTab == 1) ? 'active' : '')}>
