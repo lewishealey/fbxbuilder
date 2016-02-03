@@ -16,14 +16,11 @@ var ProductRight = require('./productright');
 var Footer = require('./footer');
 
 module.exports = React.createClass({
-    componentDidUpdate: function() {
-        console.log("preview " + this.props.toggleLogo);
-    },
     render: function() {
         return (
             <center>
                 <div id="headerTable">
-                    <Top htitle={this.props.data.htitle} hfcolour={this.props.data.hfcolour} hbgcolour={this.props.data.hbgcolour} />
+                    <Top htitle={this.props.data.htitle} hfcolour={this.props.data.hfcolour} hbgcolour={this.props.data.hbgcolour} logo={this.props.toggleLogo} />
                 </div>
                 <table border="0" cellPadding="0" cellSpacing="0" width="600" className="wrapper">
                 <tbody>
@@ -39,7 +36,7 @@ module.exports = React.createClass({
                                                 // Top of the newsletter
                                                 if(block.type == "top") {
                                                     console.log(this.props.toggleLogo);
-                                                  return <Top key={i} {...block} itc={this.props.data.itc} campaign={this.props.data.analytics} order={i} id={this.props.data.id} showOrder={this.props.showOrder} logo={this.props.toggleLogo} />
+                                                  return <Top key={i} {...block} itc={this.props.data.itc} campaign={this.props.data.analytics} order={i} id={this.props.data.id} showOrder={this.props.showOrder} />
                                                 }
 
                                                 // Hero header section

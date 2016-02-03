@@ -34,7 +34,7 @@ module.exports = React.createClass({
                                 <tr>
                                   <td>
                                     <center>
-                                      <img src={this.props.toggleLogo ? "http://www.firebox.com/firebox-light.png" : "http://www.firebox.com/firebox.png"} className="logo" width="200"/>
+                                      <img src={this.props.logo ? "http://www.firebox.com/firebox-light.png" : "http://www.firebox.com/firebox.png"} className="logo" width="200"/>
                                     </center>
                                   </td>
                                 </tr>

@@ -1,0 +1,28 @@
+{
+  "tab": [
+    {
+      "icon" : "content_paste",
+      "name" : "Brief"
+    },
+    {
+      "icon" : "dehaze",
+      "name" : "Inputs"
+    },
+    {
+      "icon" : "code",
+      "name" : "Code"
+    },
+    {
+      "icon" : "crop_original",
+      "name" : "Templates"
+    },
+    {
+      "icon" : "add_box",
+      "name" : "Add"
+    },
+    {
+      "icon" : "save",
+      "name" : "Save"
+    }
+    ]
+ }

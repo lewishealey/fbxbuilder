@@ -1,0 +1,64 @@
+{
+  "blocks":[
+    {
+      "title": "Declaration",
+      "type": "text",
+      "inputs": [
+        {
+          "bgcolour": "#EFEFEF",
+          "fcolour": "#343434",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "",
+          "title": "Lorem ipsum dolor sit amet",
+          "text": "",
+          "link": "",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    },
+    {
+      "title": "Slice",
+      "type": "slice",
+      "inputs": [
+        {
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "https://placeimg.com/640/480/any",
+          "title": "",
+          "text": "",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    },
+    {
+      "title": "Slice End",
+      "type": "sliceend",
+      "inputs": [
+        {
+          "bgcolour": "",
+          "fcolour": "",
+          "btncolour": "",
+          "btnfcolour": "",
+          "image": "https://placeimg.com/640/480/any",
+          "title": "",
+          "text": "",
+          "link": "http://www.firebox.com",
+          "productid": "",
+          "productname": "",
+          "productprice": "",
+          "productlink": ""
+        }
+      ]
+    }
+  ]
+}

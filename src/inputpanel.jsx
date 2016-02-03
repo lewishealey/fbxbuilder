@@ -41,7 +41,7 @@ module.exports = React.createClass({
               return(
               <div className="sidebar__card">
                 <div className="sidebar__card-title">
-              <h4>{blockIndex} <button type="button" className="btn btn-delete" onClick={this.onDeleteClick.bind(this, blockIndex)}>X</button> {block.title}</h4>
+              <h4>{blockIndex} <button type="button" className="btn btn-delete" onClick={this.onHeaderChange.bind(this, "toggle")}>X</button> {block.title}</h4>
               <div className="clearboth"></div>
             </div>
 
@@ -363,7 +363,7 @@ module.exports = React.createClass({
                                       </div>
 
                                       <div className="col-md-12">
-                                        <div className="panel-sub-heading">Number Style</div>
+                                        <div className="panel-sub-heading" style={{ backgroundColor : input.bgcolour, color: input.fcolour}}>Number Style</div>
                                       </div>
 
                                       <div className="col-md-6">
@@ -377,7 +377,7 @@ module.exports = React.createClass({
                                       </div>
                                       
                                       <div className="col-md-12">
-                                        <div className="panel-sub-heading">Button Style</div>
+                                        <div className="panel-sub-heading" style={{ backgroundColor : input.btncolour, color: input.btnfcolour, padding: "3px 8px", borderRadius : "2px" }}>Button Style</div>
                                       </div>
                                     
                                     <div className="col-md-6">

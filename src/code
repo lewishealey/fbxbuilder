@@ -1,108 +1,139 @@
-{ (block.type == "column" || block.type == "link" || block.type == "text" || block.type == "textop") &&
-                              <div className="col-md-12">
-                                <label>Title Text (or used for alt)</label>
-                                <input type="text" className="form-control" defaultValue={input.title} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "title")} />
-                              </div>
-                            }
-
-                            { (block.type == "hero" || block.type == "column" || block.type == "top10" || block.type == "link" || block.type == "text") && 
-                              <div className="col-md-12">
-                                <label>Text</label>
-                                  <p><textarea type="text" className="form-control" defaultValue={input.text} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "text")} /></p>
-                                </div>
-                            }
-
-                            { (block.type == "hero" || block.type == "column" || block.type == "top10" || block.type == "link" || block.type == "text") && 
-                              [
-                              <div className="col-md-6">
-                                <label>Bg Colour</label>
-                                <input type="text" className="form-control" defaultValue={input.bgcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "bgcolour")} />
-                              </div>
-                              ,
-                              <div className="col-md-6">
-                                <label>Font Colour</label>
-                                  <input type="text" className="form-control" defaultValue={input.fcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "fcolour")} />
-                              </div>
-                              ]
-                            }
- 
-                            { block.type == "link" && 
-                                <div className="col-md-12">
-                                  <label>Link</label>
-                                  <input type="text" className="form-control" defaultValue={input.link} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "link")} />
-                                </div>
-                            }
-
-                          </div>
-                          </div>
-                        </div>
-
-
-                  { (block.type == "hero" || block.type == "column" || block.type == "top10") && 
-                  [
-                    <div className="panel panel-default">
-                      <div className="panel-heading">Button Style</div>
-                      <div className="panel-body">
-                          <div className="row">
-                          
-                            <div className="col-md-6">
-                              <label>Btn bg colour</label>
-                              <input type="text" className="form-control" defaultValue={input.btncolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "btncolour")} />
-                            </div>
-
-                            <div className="col-md-6">
-                              <label>Btn text colour</label>
-                              <input type="text" className="form-control" defaultValue={input.btnfcolour} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "btnfcolour")} />
-                            </div>
-
-                          </div>
-                        </div>
-                    </div>,
-
-                    <div className="panel panel-default">
-                      <div className="panel-heading">Media</div>
-                        <div className="panel-body">
-                          <div className="row">
-                            <div className="col-md-12">
-                              <label>Image url</label>
-                              <input type="text" className="form-control" defaultValue={input.image} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "image")} />
-                            </div>
-
-                            <div className="col-md-12">
-                              <label>Product ID</label>
-                              <input type="text" className="form-control" defaultValue={input.productid} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "productid")} />
-                            </div>
-
-                            <div className="col-md-12">
-                              <label>Link</label>
-                              <input type="text" className="form-control" defaultValue={input.link} onChange={this.onInputChange.bind(this, blockIndex, inputIndex, "link")} />
-                            </div>
-
-                          </div>
-                        </div>
-                    </div>
-                  ]
-
-                                 </div>
- 
-                                 <div className="intro__section">
--                                    crapwrap
-+                                    <div className="intro__crapwrap">
-+
-+                                        <div className="intro__crapwrap__section-small">
-+                                            <img src="//media.firebox.com/i/product/wrapping.png" />
-+                                        </div>
-+
-+                                        <div className="intro__crapwrap__section-large">
-+                                            <h4>Gift wrap available £3.95</h4>
-+                                            <h4>CRAPWRAP™ or Goldenboy Giftwrap</h4>
-+                                        </div>
-+
-+                                        <div className="intro__crapwrap__section-medium">
-+                                            <img src="//media.firebox.com/i/product/watch-battle.png" />
-+                                        </div>
-+
-+                                    </div>
-                                 </div>
- 
-                             </div>
+var header = '<!DOCTYPE html>\
+<html lang="en">\
+<head>\
+<title>A Responsive Email Template</title>\
+<meta charset="utf-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1">\
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />\
+<style type="text/css">\
+    #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */\
+    .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */\
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */\
+    body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */\
+    table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */\
+    img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */\
+\
+    /* RESET STYLES */\
+    body{margin:0; padding:0;}\
+    img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}\
+    table{border-collapse:collapse !important;}\
+    body{height:100% !important; margin:0; padding:0; width:100% !important;}\
+\
+    /* iOS BLUE LINKS */\
+    .appleBody a {color:#68440a; text-decoration: none;}\
+    .appleFooter a {color:#999999; text-decoration: none;}\
+\
+    /* MOBILE STYLES */\
+    @media screen and (max-width: 525px) {\
+\
+        /* ALLOWS FOR FLUID TABLES */\
+        table[class="wrapper"]{\
+          width:100% !important;\
+        }\
+\
+        td[class="header"]{\
+          font-size: 21px !important;\
+        }\
+\
+        td[class="text"]{\
+          font-size: 14px !important;\
+        }\
+\
+        td[class="link"]{\
+          padding: 5px 15px 5px 15px !important;\
+        }\
+\
+        td[class="mobile-hide"]{\
+          display:none;\
+        }\
+\
+        .leftRow{\
+            padding: 0 !important;\
+            font-size:16px !important;\
+            line-height:125% !important;\
+        }\
+\
+        .rightRow{\
+            padding: 0 !important;\
+            font-size:16px !important;\
+            line-height:125% !important;\
+        }\
+\
+\
+        img[class="mobile-hide"]{\
+          display: none !important;\
+        }\
+\
+        img[class="img-max"]{\
+          max-width: 100% !important;\
+          width: 100% !important;\
+          height:auto !important;\
+        }\
+\
+        table[class="responsive-table"]{\
+          width:100%!important;\
+        }\
+\
+        td[class="section-padding"]{\
+          padding: 0px 15px 15px 15px !important;\
+        }\
+\
+        td[class="slice-padding"]{\
+          padding: 0px 15px 0px 15px !important;\
+        }\
+\
+        td[class="smaller-padding"]{\
+          padding: 15px 0px 15px 0px !important;\
+        }\
+\
+        td[class="text-padding"]{\
+          padding: 15px 0px 15px 0px !important;\
+        }\
+\
+        td[class="link-padding"]{\
+          padding: 0px 0px 15px 0px !important;\
+        }\
+\
+        td[class="column-padding"]{\
+          padding: 0px 0px 15px 0px !important;\
+        }\
+\
+        #templateColumns{\
+            width:100% !important;\
+        }\
+\
+        .templateColumnContainer{\
+            display:block !important;\
+            width:100% !important;\
+        }\
+\
+        .oneHundred{\
+            display:block !important;\
+            width:100% !important;\
+        }\
+        .columnImage{\
+            height:auto !important;\
+            max-width:480px !important;\
+            width:100% !important;\
+        }\
+\
+        .leftColumnContent{\
+            font-size:16px !important;\
+            line-height:125% !important;\
+        }\
+\
+        .rightColumnContent{\
+            font-size:16px !important;\
+            line-height:125% !important;\
+        }\
+\
+        td[class="mobile-wrapper"]{\
+            padding: 0 !important;\
+        }\
+\
+    }\
+</style>\
+</head> \
+<body bgcolour=\"#EFEFEF\" style=\"background-color: #EFEFEF; \"> \
+';
+var footer = "</body></html>"

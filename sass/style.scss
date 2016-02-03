@@ -39,6 +39,10 @@ $paypal:            #C6F0F4;
 	opacity: 1;
 }
 
+.toggle {
+  margin-left: 300px;
+}
+
 .code {
   position: fixed;
   right: 0;
@@ -102,11 +106,11 @@ label {
   	top: 0;
   	left: 75px;
   	width: 300px;
-  	z-index: 100;
   	background-color: #fff;
   	height: 100%;
   	overflow-y: auto;
     display: none;
+    z-index: 100;
 
     &__flex {
         display: flex;
@@ -155,27 +159,46 @@ label {
   display: flex;
   flex-direction: column;
   height: 100%;
+  z-index: 200;
 
-  &__item {
-    background-color: $charcoal;
-    color: $white;
-    border: 0;
-    border-bottom: 1px solid lighten($charcoal,5%);
-    font-size: 20px;
-    flex: 1;
-    height: 75px;
-  }
+    &__item {
+      background-color: $charcoal;
+      color: $white;
+      border: 0;
+      border-bottom: 1px solid lighten($charcoal,5%);
+      font-size: 20px;
+      flex: 1;
+      height: 75px;
 
-  &__item.active {
-    background-color: lighten($charcoal, 10%);
-  }
+      &-tooltip {
+        display: none;
+        position: absolute;
+        padding: 5px 10px;
+        background-color: darken($charcoal,10%);
+        color: $white;
+        left: 60px;
+        font-size: 12px;
+        border-radius: 10px;
+        width: auto;
+        float: left;
+      }
 
-  &--save {
-    background-color: #C6F0F4;
-    border-bottom: none;
-    color: #79C0C0;
-  }
+    }
 
+    &__item.active {
+      background-color: lighten($charcoal, 10%);
+    }
+
+    &--save {
+      background-color: #C6F0F4;
+      border-bottom: none;
+      color: #79C0C0;
+    }
+
+}
+
+.options__item:hover .options__item-tooltip {
+  display: block;
 }
 
 .options-add {

@@ -13,6 +13,9 @@
 .loaded {
   opacity: 1; }
 
+.toggle {
+  margin-left: 300px; }
+
 .code {
   position: fixed;
   right: 0;
@@ -69,11 +72,11 @@ label {
   top: 0;
   left: 75px;
   width: 300px;
-  z-index: 100;
   background-color: #fff;
   height: 100%;
   overflow-y: auto;
-  display: none; }
+  display: none;
+  z-index: 100; }
   .sidebar__flex {
     display: flex;
     flex-direction: column; }
@@ -104,7 +107,8 @@ label {
   width: 75px;
   display: flex;
   flex-direction: column;
-  height: 100%; }
+  height: 100%;
+  z-index: 200; }
   .options__item {
     background-color: #343434;
     color: #FFF;
@@ -113,12 +117,26 @@ label {
     font-size: 20px;
     flex: 1;
     height: 75px; }
+    .options__item-tooltip {
+      display: none;
+      position: absolute;
+      padding: 5px 10px;
+      background-color: #1a1a1a;
+      color: #FFF;
+      left: 60px;
+      font-size: 12px;
+      border-radius: 10px;
+      width: auto;
+      float: left; }
   .options__item.active {
     background-color: #4e4e4e; }
   .options--save {
     background-color: #C6F0F4;
     border-bottom: none;
     color: #79C0C0; }
+
+.options__item:hover .options__item-tooltip {
+  display: block; }
 
 .options-add {
   display: flex;

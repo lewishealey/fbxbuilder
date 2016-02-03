@@ -18,7 +18,6 @@
           "productlink": "http://www.firebox.com/product/7260/"
         },
         {
-          "order": "6",
           "bgcolour": "#FFFFFF",
           "fcolour": "#343434",
           "btncolour": "#343434",
@@ -27,10 +26,7 @@
           "title": "",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "link": "",
-          "productid": "7260",
-          "productname": "BB8",
-          "productprice": "£109.99",
-          "productlink": "http://www.firebox.com/product/7260/"
+          "productid": "7260"
         }
       ]
     }
