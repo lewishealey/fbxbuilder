@@ -1,71 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Newsletter Builder</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==' crossorigin='anonymous'>
-    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-    <link rel='stylesheet' href='style.css'>
+<html lang="en">
+<head>
+<title>A Responsive Email Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link href="style.css" rel="stylesheet" type="text/css">
 
-
-    <style>
-
-    body {
-      background-color: #EFEFEF;
-    }
-
-    .block {
-      padding: 20px;
-      margin: 10px;
-      border: 1px solid #343434;
-      background: #fff;
-      width: 300px;
-    }
-
-    .column {
-      width: 295px;
-    }
-
-    .column img {
-      max-width: 100%;
-    }
-
-    .hero {
-      padding: 20px;
-      width: 600px;
-      margin-bottom: 10px;
-    }
-
-    .hero img {
-      max-width: 100%;
-    }
-
-    .logo {
-      max-width: 200px;
-    }
-
-    .top {
-      font-size: 42px;
-      font-weight: bold;
-    }
-
-    .text {
-      font-size: 18px;
-      line-height: 1;
-    }
-
-    /* MOBILE STYLES */
-    @media screen and (max-width: 525px) {
-      .hero { width: 100%;}
-      .column { margin: 0 0 20px 0; }
-      .top { font-size: 20px; }
-      .text { font-size: 14px; }
-
-    }
-
-    /* CLIENT-SPECIFIC STYLES */
-    #outlook a{padding:0;} /* Force Outlook to provide a 'view in browser' message */
+<style type="text/css">
+    #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
     .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
     .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
     body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
@@ -79,106 +25,113 @@
     body{height:100% !important; margin:0; padding:0; width:100% !important;}
 
     /* iOS BLUE LINKS */
-    .appleBody a {color:#68440a; text-decoration: none;}
-    .appleFooter a {color:#999999; text-decoration: none;}
-
-    table[class='wrapper']{
-          max-width: 600px !important;
-    }
+    .appleBody a {color: inherit !important; text-decoration: none;}
+    .appleFooter a {color: inherit !important; text-decoration: none;}
 
     /* MOBILE STYLES */
     @media screen and (max-width: 525px) {
-
+ 
         /* ALLOWS FOR FLUID TABLES */
-        table[class='wrapper']{
+        table[class="wrapper"]{
+          width:100% !important;
+        }
+        
+        td[class="wrapper"]{
           width:100% !important;
         }
 
-        /* ADJUSTS LAYOUT OF LOGO IMAGE */
-        td[class='logo']{
-          text-align: left;
-          padding: 20px 0 20px 0 !important;
+        td[class="header"]{
+          font-size: 21px !important;
         }
 
-        td[class='logo'] img{
-          margin:0 auto!important;
+        td[class="text"]{
+          font-size: 14px !important;
         }
 
-        /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
-        td[class='mobile-hide']{
-          display:none;}
+        td[class="link"]{
+          padding: 5px 15px 5px 15px !important;
+        }
 
-        img[class='mobile-hide']{
+        td[class="mobile-hide"]{
+          display:none;
+        }
+
+        img[class="mobile-hide"]{
           display: none !important;
         }
 
-        img[class='img-max']{
+        img[class="img-max"]{
           max-width: 100% !important;
           width: 100% !important;
           height:auto !important;
         }
 
-        /* FULL-WIDTH TABLES */
-        table[class='responsive-table']{
+        table[class="responsive-table"]{
           width:100%!important;
         }
 
-        .column{
-          width:100%!important;
+        td[class="section-padding"]{
+          padding: 0px 15px 15px 15px !important;
         }
 
-        /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
-        td[class='padding']{
-          padding: 10px 5% 15px 5% !important;
+        td[class="slice-padding"]{
+          padding: 0px 15px 0px 15px !important;
         }
 
-        td[class='padding-copy']{
-          padding: 10px 5% 10px 5% !important;
-          text-align: center;
+        td[class="smaller-padding"]{
+          padding: 15px 0px 15px 0px !important;
         }
 
-        td[class='padding-meta']{
-          padding: 30px 5% 0px 5% !important;
-          text-align: center;
+        td[class="text-padding"]{
+          padding: 15px 0px 15px 0px !important;
         }
 
-        td[class='no-pad']{
-          padding: 0 0 20px 0 !important;
+        td[class="link-padding"]{
+          padding: 0px 0px 15px 0px !important;
         }
 
-        td[class='no-padding']{
-          padding: 0 !important;
+        td[class="column-padding"]{
+          padding: 0px 0px 15px 0px !important;
         }
 
-        td[class='section-padding']{
-          padding: 0 15px 25px 15px !important;
+        td[class="mobile-wrapper"]{
+            padding: 0 !important;
+        }
+        
+        td[class="top-50"]{
+            height: 30px !important;
+            text-align: center !important;
         }
 
-        td[class='section-padding-bottom-image']{
-          padding: 50px 15px 0 15px !important;
-        }
-
-        /* ADJUST BUTTONS ON MOBILE */
-        td[class='mobile-wrapper']{
-            padding: 10px 5% 15px 5% !important;
-        }
-
-        table[class='mobile-button-container']{
-            margin:0 auto;
+        #templateColumns{
             width:100% !important;
         }
 
-        a[class='mobile-button']{
-            width:80% !important;
-            padding: 15px !important;
-            border: 0 !important;
-            font-size: 16px !important;
+        .templateColumnContainer{
+            display:block !important;
+            width:100% !important;
         }
 
-    }
+        .columnImage{
+            height:auto !important;
+            max-width:480px !important;
+            width:100% !important;
+        }
 
-    </style>
-  </head>
+        .leftColumnContent{
+            font-size:16px !important;
+            line-height:125% !important;
+        }
+
+        .rightColumnContent{
+            font-size:16px !important;
+            line-height:125% !important;
+        }
+
+
+    }
+</style>
+</head>
   <body>
 
 	<div id='builder'></div>

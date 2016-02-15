@@ -8,45 +8,82 @@
         },
         "desc" : false,
         "discount" : {
-          "code" : false,
-          "title" : false
+          "code" : "000",
+          "title" : "Cutoff at this time"
         },
         "features" : false,
-        "font_colour" : "#343434",
         "link" : false,
-        "media" : false,
+        "media" : {
+          "media" : "http://www.img.com",
+          "link" : "http://www.dot.com"
+        },
         "product" : {
           "id" : "0"
         },
-        "settings" : {
-          "show_features" : false,
-          "show_price" : true,
-          "show_social" : false,
-          "show_top_media" : false
+        "margin" : {
+          "top" : 20,
+          "bottom" : 20
         },
+        "settings" : false,
         "style" : {
           "bg_colour" : "#FFF",
           "font_colour" : "#343434"
         },
         "title" : false,
-        "top_media" : {
+        "text_media" : {
           "link" : false,
           "media" : false
         }
-      }
-    },
-    "margin" : {
-      "bottom" : "0",
-      "top" : "0"
-    },
-    "name" : "Card name",
-    "style" : false,
-    "type" : "type"
+      },
+      "margin" : {
+        "bottom" : "0",
+        "top" : "0"
+      },
+      "name" : "Card name",
+      "style" : false,
+      "type" : "type"
+    }
   },
   "colours" : false,
   "data" : {
     "brief" : false,
-    "cards" : false,
+    "cards" : [
+        {
+        "inputs" : [
+          {
+            "cta" : {
+              "bg_colour" : "#343434",
+              "font_colour" : "#FFFFFF",
+              "text" : "CTA BUTTON"
+            },
+            "desc" : "This is description text",
+            "discount" : false,
+            "features" : false,
+            "link" : "http://www.dot.com",
+            "media" : false,
+            "product" : {
+              "id" : "7620"
+            },
+            "style" : {
+              "bg_colour" : "#FFF",
+              "font_colour" : "#343434"
+            },
+            "title" : "false",
+            "text_media" : {
+              "link" : false,
+              "media" : false
+            }
+          }
+        ],
+        "margin" : {
+          "bottom" : "0",
+          "top" : "0"
+        },
+      "name" : "Row 1",
+      "style" : false,
+      "type" : "row"
+      }
+    ],
     "header" : {
       "background_colour" : "#343434",
       "dark_logo" : false,

@@ -72,7 +72,7 @@ label {
   top: 0;
   left: 75px;
   width: 300px;
-  background-color: #fff;
+  background-color: #FBFDFF;
   height: 100%;
   overflow-y: auto;
   display: none;
@@ -85,19 +85,22 @@ label {
     background-color: #fff;
     flex: 1;
     margin: 10px;
-    border: 1px solid #e6e6e6;
-    border-radius: 5px; }
+    border: 2px solid #EFF1F4; }
     .sidebar__card h4 {
       margin: 0 0 5px 0;
       font-weight: 300;
       font-style: normal; }
   .sidebar__card-title {
     padding: 10px;
-    background: #fafafa;
+    background: #EFF1F4;
     display: inline-block;
-    width: 100%; }
+    width: 100%;
+    color: #485569; }
     .sidebar__card-title h4 {
-      font-size: 16px; }
+      font-size: 16px;
+      color: #485569;
+      margin: 0;
+      font-weight: bold; }
 
 .options {
   position: fixed;
@@ -110,10 +113,10 @@ label {
   height: 100%;
   z-index: 200; }
   .options__item {
-    background-color: #343434;
-    color: #FFF;
+    background-color: #33404D;
+    color: #758ca4;
     border: 0;
-    border-bottom: 1px solid #414141;
+    border-bottom: 1px solid #3d4d5c;
     font-size: 20px;
     flex: 1;
     height: 75px; }
@@ -129,7 +132,7 @@ label {
       width: auto;
       float: left; }
   .options__item.active {
-    background-color: #4e4e4e; }
+    background-color: #FFF; }
   .options--save {
     background-color: #C6F0F4;
     border-bottom: none;
@@ -272,11 +275,12 @@ label {
     color: #ff3333; }
 
 .panel-default > .panel-heading {
-  border: 0; }
+  border: 0;
+  background-color: transparent; }
 
 .panel-sub-heading {
   font-size: 14px;
-  color: #818181;
+  color: #343434;
   display: inline-block;
   margin: 15px 0 10px 0; }
 
@@ -284,7 +288,25 @@ label {
   border: 0; }
 
 .panel-heading {
-  padding: 5px 10px; }
+  padding: 0px; }
+
+.panel-default > .panel-heading {
+  background-color: #e0e4ea;
+  border-radius: 0px; }
+
+.panel-tabs {
+  display: inline-block;
+  width: 100%; }
+  .panel-tabs__tab {
+    color: #a3afc0;
+    padding: 10px;
+    display: inline-block; }
+    .panel-tabs__tab.active {
+      background-color: #FFF;
+      color: #a3afc0; }
+
+.panel {
+  box-shadow: none; }
 
 .panel-body {
   padding: 10px 10px 0 10px; }
@@ -294,3 +316,11 @@ label {
   top: 15px;
   right: 15px;
   z-index: 100; }
+
+.form-control {
+  border-radius: 0px;
+  box-shadow: none;
+  border-color: #EFF1F4;
+  border-width: 2px; }
+  .form-control:focus {
+    box-shadow: none; }

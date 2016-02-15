@@ -106,7 +106,7 @@ label {
   	top: 0;
   	left: 75px;
   	width: 300px;
-  	background-color: #fff;
+  	background-color: #FBFDFF; // #E5678F
   	height: 100%;
   	overflow-y: auto;
     display: none;
@@ -122,8 +122,7 @@ label {
         background-color: #fff;
         flex: 1;
         margin: 10px;
-        border: 1px solid darken($white,10%);
-        border-radius: 5px;
+        border: 2px solid #EFF1F4;
 
         h4 {
             margin: 0 0 5px 0;
@@ -138,12 +137,16 @@ label {
 
     &__card-title {
         padding: 10px;
-        background: darken(#fff, 2%);
+        background: #EFF1F4;
         display: inline-block;
         width: 100%;
+        color: darken(#EFF1F4,60%);
 
         h4 {
           font-size: 16px;
+          color: darken(#EFF1F4,60%);
+          margin: 0;
+          font-weight: bold;
         }
 
     }
@@ -162,10 +165,10 @@ label {
   z-index: 200;
 
     &__item {
-      background-color: $charcoal;
-      color: $white;
+      background-color: #33404D;
+      color: lighten(#33404D,30%);
       border: 0;
-      border-bottom: 1px solid lighten($charcoal,5%);
+      border-bottom: 1px solid lighten(#33404D,5%);
       font-size: 20px;
       flex: 1;
       height: 75px;
@@ -186,7 +189,7 @@ label {
     }
 
     &__item.active {
-      background-color: lighten($charcoal, 10%);
+      background-color: $white;
     }
 
     &--save {
@@ -379,11 +382,12 @@ label {
 
 .panel-default>.panel-heading {
   border: 0;
+  background-color: transparent;
 }
 
 .panel-sub-heading {
   font-size: 14px;
-  color: lighten(#343434,30%);
+  color: lighten(#343434,0%);
   display: inline-block;
   margin: 15px 0 10px 0;
 }
@@ -393,7 +397,34 @@ label {
 }
 
 .panel-heading {
-  padding: 5px 10px;
+  padding: 0px;
+}
+
+.panel-default > .panel-heading {
+  background-color: darken(#EFF1F4,5%);
+  border-radius: 0px;
+}
+
+.panel-tabs {
+  display: inline-block;
+  width: 100%;
+
+  &__tab {
+    color: darken(#EFF1F4,25%);
+    padding: 10px;
+    display: inline-block;
+
+    &.active {
+      background-color: $white;
+      color: darken(#EFF1F4,25%);
+    }
+
+  }
+
+}
+
+.panel {
+  box-shadow: none;
 }
 
 .panel-body {
@@ -407,4 +438,15 @@ label {
   z-index: 100;
 }
 
+.form-control {
+  border-radius: 0px;
+  box-shadow: none;
+  border-color: #EFF1F4;
+  border-width: 2px;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+}
 

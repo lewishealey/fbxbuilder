@@ -199,7 +199,7 @@ var Builder = React.createClass({
               </div>,
 
               <div className={"sidebar " + ((this.state.currentTab == 1) ? 'active' : '')}>
-                <Cards data={this.state.data} onDataChange={this.onDataChange} onDeleteClick={this.onDeleteClick} onHeaderChange={this.onHeaderChange} toggleLogo={this.onLogoChange}/>
+                <Cards data={this.state.data} config={this.state.config} onDataChange={this.onDataChange} onDeleteClick={this.onDeleteClick} onHeaderChange={this.onHeaderChange} toggleLogo={this.onLogoChange}/>
               </div>,
 
               <div className={"colour-scheme " + ((this.state.currentTab == 2) ? 'active' : '')}  id="colour-scheme">
@@ -254,7 +254,7 @@ var Builder = React.createClass({
             </div>
 
             <div className={this.state.showToolbar ? "preview-panel toggle" : "preview-panel" }>
-                <Preview data={this.state.data} showOrder={this.state.showOrder} toggleLogo={this.state.toggleLogo} />
+                <Preview data={this.state.data} config={this.state.config} showOrder={this.state.showOrder} toggleLogo={this.state.toggleLogo} />
             </div>
 
           </div>

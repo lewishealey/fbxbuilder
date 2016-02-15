@@ -2,54 +2,40 @@ var React = require('react');
 
 module.exports = React.createClass({
         render: function() {
-          var componentStyle = {
-            textAlign: "center",
-            color: this.props.hfcolour,
-            backgroundColor: this.props.hbgcolour,
-            fontFamily: "'sofia_pro_regular', Arial, sans-serif",
-            padding: "30px 15px",
-            lineHeight: "1",
-            fontSize: "42px",
-            fontWeight: "bold",
-            wordWrap: "break-word"
-          };
 
-          var headerStyle = {
-            textAlign: "center",
-            color: this.props.hfcolour,
-            backgroundColor: this.props.hbgcolour,
-            fontFamily: "'sofia_pro_regular', Arial, sans-serif",
-            padding: "15px 15px",
-            margin: "0px",
-            lineHeight: "1"
-          };
+          return (
 
-          return <table className="top" cellSpacing="0" cellPadding="0" width="100%">
-                    <tbody>
-                      <tr>
-                        <td style={headerStyle}>
-                          <center>
-                            <table className="wrapper" width="600">
-                              <tbody>
-                                <tr>
-                                  <td>
-                                    <center>
-                                      <img src={this.props.logo ? "http://www.firebox.com/firebox-light.png" : "http://www.firebox.com/firebox.png"} className="logo" width="200"/>
-                                    </center>
+            <table border="0" cellPadding="0" cellSpacing="0" width="100%">
+              <tr>
+                  <td bgcolor="#333333" style={{ backgroundColor: "#333333" }}>
+                      <div align="center" style={{ padding: "0px 15px 0px 15px", textAlign: "center" }}>
+                          <table border="0" cellPadding="0" cellSpacing="0" width="600" className="wrapper" style={{ margin: "0 auto"}}>
+                              <tr>
+                                  <td style={{ padding: "20px 0px 30px 0px" }} className="logo">
+                                      <table border="0" cellPadding="0" cellSpacing="0" width="100%">
+                                          <tr>
+                                              <td bgcolor="#333333" width="200" align="center" style={{ textAlign: "center" }}>
+                                                  <a href="http://www.firebox.com" target="_blank">
+                                                      <img alt="Logo" src="http://www.firebox.com/firebox.png" width="200" height="25" border="0" />
+                                                  </a>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td bgcolor="#333333" width="600" align="center" className="header" style={{ fontWeight: "bold", fontFamily: "'Arial', sans-serif", color: "#fff", paddingTop: "25px", fontSize: "42px", lineHeight: "1", textAlign: "center"}}>
+                                                  Pebble Time Smartwatch and new products this week
+                                              </td>
+                                          </tr>
+                                      </table>
                                   </td>
-                                </tr>
-                                <tr>
-                                  <td style={componentStyle}>
-                                    {this.props.htitle}
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </center>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                              </tr>
+                          </table>
+                      </div>
+                  </td>
+              </tr>
+          </table>
+        
+        );
+        
         }
 
       }); 
