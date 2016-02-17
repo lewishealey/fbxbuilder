@@ -1,102 +1,90 @@
 {
-  "cards" : {
-    "master" : {
-      "input" : {
-        "cta" : {
-          "background_colour" : "#343434",
-          "font_colour" : "#FFFFFF"
-        },
-        "desc" : false,
-        "discount" : {
-          "code" : "000",
-          "title" : "Cutoff at this time"
-        },
-        "features" : false,
-        "link" : false,
-        "media" : {
-          "media" : "http://www.img.com",
-          "link" : "http://www.dot.com"
-        },
-        "product" : {
-          "id" : "0"
-        },
-        "margin" : {
-          "top" : 20,
-          "bottom" : 20
-        },
-        "settings" : false,
-        "style" : {
-          "bg_colour" : "#FFF",
-          "font_colour" : "#343434"
-        },
-        "title" : false,
-        "text_media" : {
-          "link" : false,
-          "media" : false
-        }
-      },
-      "margin" : {
-        "bottom" : "0",
-        "top" : "0"
-      },
-      "name" : "Card name",
-      "style" : false,
-      "type" : "type"
-    }
-  },
   "colours" : false,
   "data" : {
+    "id" : "2000",
+    "name" : "A newsletter with the new builder",
+    "itc" : "000",
     "brief" : false,
-    "cards" : [
+    "cards" : false,
+    "header" : {
+      "background_colour" : "#343434",
+      "dark_logo" : false,
+      "color" : "#FFFFFF",
+      "link" : false,
+      "media" : false,
+      "show_logo" : true,
+      "title" : false
+    }
+  },
+  "tabs" : false,
+  "templates" : false,
+  "mastercards": [
         {
-        "inputs" : [
-          {
+          "name" : "Card name",
+          "type" : "master",
+          "style" : {
+            "style_1" : false,
+            "style_2" : false
+          },
+          "margin" : {
+            "paddingBottom" : "0",
+            "paddingTop" : "0"
+          },
+          "input" : {
             "cta" : {
-              "bg_colour" : "#343434",
-              "font_colour" : "#FFFFFF",
-              "text" : "CTA BUTTON"
+              "background_colour" : "#343434",
+              "color" : "#FFFFFF"
             },
-            "desc" : "This is description text",
-            "discount" : false,
+            "title" : false,
+            "desc" : false,
+            "discount" : {
+              "code" : "000",
+              "title" : "Cutoff at this time"
+            },
             "features" : false,
-            "link" : "http://www.dot.com",
-            "media" : false,
+            "link" : false,
+            "media" : {
+              "media" : "http://www.img.com",
+              "link" : "http://www.dot.com"
+            },
             "product" : {
-              "id" : "7620"
+              "id" : "0"
             },
+            "settings" : false,
             "style" : {
-              "bg_colour" : "#FFF",
-              "font_colour" : "#343434"
+              "backgroundColor" : "#FFF",
+              "color" : "#343434"
             },
-            "title" : "false",
             "text_media" : {
               "link" : false,
               "media" : false
             }
           }
-        ],
-        "margin" : {
-          "bottom" : "0",
-          "top" : "0"
         },
-      "name" : "Row 1",
-      "style" : false,
-      "type" : "row"
-      }
-    ],
-    "header" : {
-      "background_colour" : "#343434",
-      "dark_logo" : false,
-      "font_colour" : "#FFFFFF",
-      "link" : false,
-      "media" : false,
-      "show_logo" : true,
-      "title" : false
-    },
-    "id" : "2000",
-    "itc" : "000",
-    "name" : "A newsletter with the new builder"
-  },
-  "tabs" : false,
-  "templates" : false
+        {
+          "name" : "Text",
+          "type" : "text",
+          "style" : false,
+          "margin" : {
+            "paddingBottom" : "20px",
+            "paddingTop" : "20px"
+          },
+          "input" : {
+            "cta" : false,
+            "title" : "Blah blah text",
+            "desc" : false,
+            "discount" : false,
+            "features" : false,
+            "link" : "http://www.dot.com",
+            "media" : false,
+            "product" : false,
+            "settings" : false,
+            "style" : {
+              "backgroundColor" : "#FFF",
+              "color" : "#343434"
+            },
+            "text_media" : false
+          }
+        }
+  ]
 }

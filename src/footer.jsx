@@ -7,7 +7,7 @@ module.exports = React.createClass({
           <tbody>
     <tr>
         <td bgcolor="#ffffff" align="center" style={{padding: "20px 0px", textAlign: "center", backgroundColor: "#FFFFFF"}}>
-            <table width="100%" border="0" cellSpacing="0" cellpadding="0" align="center" style={{textAlign: "center"}} className="responsive-table">
+            <table width="100%" border="0" cellSpacing="0" cellPadding="0" align="center" style={{textAlign: "center"}} className="responsive-table">
             <tbody>
                 <tr>
                     <center>
@@ -25,8 +25,8 @@ module.exports = React.createClass({
                             VAT Reg. No.: 798 6593 41 Registered in England & Wales, No. 3874477 </p>
 
                             <p>info@firebox.com | www.firebox.com | 0800 802 1420</p><br /><a href="*|UNSUB|*" className="original-only" style={{color: "#666666", textDecoration: "none"}}>Unsubscribe</a><span className="original-only" style={{fontFamily: "Arial, sans-serif", fontSize: "12px", color: "#444444"}}>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><a href="*|ARCHIVE|*" style={{color: "#666666", textDecoration: "none"}}>View this email in your browser</a>
-                    
-                        </span> 
+
+                        </span>
                     </td>
                     </center>
                 </tr>

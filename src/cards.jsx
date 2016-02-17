@@ -2,6 +2,14 @@ var React = require('react');
 var Card = require('./card');
 
 module.exports = React.createClass({
+    getInitialState: function() {
+      return {
+          loaded: false
+      }
+    },
+    componentDidMount: function() {
+      this.setState({ loaded: true });
+    },
     onInputChange: function(blockIndex, inputIndex, inputField, event) {
         this.props.onDataChange(blockIndex, inputIndex, inputField, event.target.value);
     },
@@ -16,10 +24,18 @@ module.exports = React.createClass({
     },
     renderCards: function() {
 
-    },  
+      if(this.state.loaded && this.props.config.data && this.props.config.data.cards) {
+        {this.props.config.data.cards.map(function(card, i) {
+           return <Card card={card} i={i} key={i} onDataChange={this.onDataChange} onDeleteClick={this.onDeleteClick} onHeaderChange={this.onHeaderChange} toggleLogo={this.onLogoChange} />
+        }.bind(this))}
+      } else {
+        return <h4>Add a card to get started</h4>
+      }
+
+    },
     render: function() {
             if(this.props.config) {
-              console.log(this.props.config);
+              // console.log("cards config " + this.props.config);
             };
         return (
             <div className="sidebar__flex">
@@ -42,17 +58,13 @@ module.exports = React.createClass({
                   </div>
                 </div>
 
-              {this.props.config &&
-                this.props.config.data.cards.map(function(card, i) {
-                   return <Card card={card} i={i} key={i} onDataChange={this.onDataChange} onDeleteClick={this.onDeleteClick} onHeaderChange={this.onHeaderChange} toggleLogo={this.onLogoChange}/>
-                })
-              }
+                {this.renderCards()}
 
             </div>
 
           )
 
-            
+
 
     }
 

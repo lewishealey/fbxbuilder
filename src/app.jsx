@@ -5,6 +5,7 @@ var Jquery = require('jquery');
 var Cards = require('./cards');
 var Preview = require('./preview');
 var BriefPanel = require('./briefpanel');
+var Add = require('./add');
 var Tab = require('./tab');
 
 // Templates
@@ -13,17 +14,6 @@ var data = {"id":"01","name":"First Newsletter","type":"newsletter","itc":"000",
 var tabs = {"tab":[{"icon":"content_paste","name":"Brief"},{"icon":"dehaze","name":"Inputs"},{"icon":"code","name":"Code"},{"icon":"crop_original","name":"Templates"},{"icon":"add_box","name":"Add"},{"icon":"save","name":"Save"}]};
 var templates = {"templates":[{"name":"Solus","data":"solus","description":"Solus template to promote a single product.","image":""},{"name":"Danger Zone","data":"danger","description":"If a product is in high stock, show reviews and social","image":""}]};
 
-// Blocks
-var hero = {"title":"Hero","type":"hero","inputs":[{"bgcolour":"#FFFFFF","fcolour":"#343434","btncolour":"#343434","btnfcolour":"#FFFFFF","image":"http://media.firebox.com/i/home/feature/2x2/naga_vodka.jpg","title":"Lorem ipsum dolor sit amet","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a mi consequat, eleifend felis eget, placerat enim","link":"http://www.firebox.com","productid":"","productname":"","productprice":"","productlink":""}]};
-var column = {"title":"Row 1","type":"column","inputs":[{"bgcolour":"#FFFFFF","fcolour":"#343434","btncolour":"#343434","btnfcolour":"#FFFFFF","image":"","title":"","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","link":"","productid":"7260","productname":"BB8","productprice":"£109.99","productlink":"http://www.firebox.com/product/7260/"},{"order":"6","bgcolour":"#FFFFFF","fcolour":"#343434","btncolour":"#343434","btnfcolour":"#FFFFFF","image":"","title":"","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","link":"","productid":"7260","productname":"BB8","productprice":"£109.99","productlink":"http://www.firebox.com/product/7260/"}]};
-var link = {"title":"Link","type":"link","inputs":[{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet","text":"","link":"http://www.firebox.com","productid":"","productname":"","productprice":"","productlink":""}]};
-var slice = {"title":"Slice","type":"slice","inputs":[{"bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"https://placeimg.com/640/480/any","title":"","text":"","link":"http://www.firebox.com","productid":"","productname":"","productprice":"","productlink":""}]};
-var sliceend = {"title":"Slice End","type":"sliceend","inputs":[{"bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"https://placeimg.com/640/480/any","title":"","text":"","link":"http://www.firebox.com","productid":"","productname":"","productprice":"","productlink":""}]};
-var text = {"title":"Text","type":"text","inputs":[{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""}]};
-var top10 = {"title":"Top 10","type":"top10","inputs":[{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""},{"bgcolour":"#EFEFEF","fcolour":"#343434","btncolour":"","btnfcolour":"","image":"","title":"","text":"Free UK Delivery for orders over £50","link":"","productid":"","productname":"","productprice":"","productlink":""}]};
-var feature = {"title":"Feature list","type":"feature","inputs":[{"bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""},{"order":"10","bgcolour":"","fcolour":"","btncolour":"","btnfcolour":"","image":"","title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","text":"","link":"","productid":"","productname":"","productprice":"","productlink":""}]};
-var productleft = {"title":"Align left","type":"productleft","inputs":[{"bgcolour":"#FFFFFF","fcolour":"#343434","btncolour":"#343434","btnfcolour":"#FFFFFF","image":"","title":"","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a mi consequat, eleifend felis eget, placerat enim","link":"","productid":"7418","productname":"Middle Class Problems","productprice":"£9.99","productlink":"http://www.firebox.com/product/7418/"}]};
-var productright = {"title":"Align right","type":"productright","inputs":[{"bgcolour":"#FFFFFF","fcolour":"#343434","btncolour":"#343434","btnfcolour":"#FFFFFF","image":"","title":"","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a mi consequat, eleifend felis eget, placerat enim","link":"","productid":"7418","productname":"Middle Class Problems","productprice":"£9.99","productlink":"http://www.firebox.com/product/7418/"}]};
 
 // Main component, receives the json from the server
 var Builder = React.createClass({
@@ -32,7 +22,7 @@ var Builder = React.createClass({
       data: this.props.data,
       tabs: this.props.tabs,
       colourScheme: false,
-      currentTab: 1,
+      currentTab: 4,
       currentOrder: 1,
       showOrder: false,
       showToolbar: true,
@@ -56,7 +46,7 @@ var Builder = React.createClass({
 
   },
   componentDidMount: function() {
-      
+
       // Get JSON file
       Jquery.getJSON("/json/config.json", function(result){
         this.setState({ config: result });
@@ -83,7 +73,7 @@ var Builder = React.createClass({
     //Get current data
     var data = this.state.data;
 
-    //Delete 
+    //Delete
     delete data.blocks[blockIndex];
     this.setState({ data: data});
 
@@ -93,10 +83,10 @@ var Builder = React.createClass({
     // Changing the headers rather than blocks
     var config = this.state.config;
 
-    config.data[inputField] = inputValue; 
+    config.data[inputField] = inputValue;
 
     // Set new data after changes
-    this.setState({ 
+    this.setState({
       config: config
     });
 
@@ -104,7 +94,7 @@ var Builder = React.createClass({
   onLogoChange: function() {
     var logo = this.state.toggleLogo;
 
-    this.setState({ 
+    this.setState({
       toggleLogo: ! logo
     });
 
@@ -115,8 +105,8 @@ var Builder = React.createClass({
   },
   handleToggle: function() {
     // Turn the toolabr on and off to test responsive
-    this.setState({ 
-      showToolbar: ! this.state.showToolbar 
+    this.setState({
+      showToolbar: ! this.state.showToolbar
     });
   },
   handleAddBlock: function(type) {
@@ -164,7 +154,7 @@ var Builder = React.createClass({
     if(name == "solus") {
         data.blocks = solus.blocks;
     }
-    
+
     this.setState({ data: data });
   },
   handleSend: function() {
@@ -181,13 +171,30 @@ var Builder = React.createClass({
     });
 
   },
+  handleCard: function(card) {
+    var config = this.state.config;
+
+    if(config.data.cards) {
+      config.data.cards.splice(1,0, card);
+    } else {
+      config.data.cards = [];
+      config.data.cards.push(card);
+      //console.log(card);
+    }
+
+    this.setState({
+        config: config
+    });
+
+
+  },
   render: function () {
 
       return (
           <div>
             {this.state.showToolbar &&
               [<div className="options" >
-                
+
                 {this.props.tabs.tab.map(function(tab, i) {
                     return <Tab handleTab={this.handleTab} key={i} no={i} name={tab.name} icon={tab.icon} tab={this.state.currentTab} />
                 }.bind(this))}
@@ -232,17 +239,17 @@ var Builder = React.createClass({
                 </div>,
 
                 <div className="options-add">
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "hero")} className="inset"><img src="img/Icon-Hero.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "link")} className="inset"><img src="img/Icon-Link.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "column")} className="inset"><img src="img/Icon-Column.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "text")} className="inset"><img src="img/Icon-Text.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "top10")} className="inset"><img src="img/Icon-Top-10.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "slice")} className="inset"><img src="img/Icon-Slice.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "sliceend")} className="inset"><img src="img/Icon-Slice-End.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "feature")} className="inset"><img src="img/Icon-Feature.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "productleft")} className="inset"><img src="img/Icon-Product-Left.png" /></a></div>
-                  <div className="options-add__item"><a href="#" onClick={this.handleAddBlock.bind(this, "productright")} className="inset"><img src="img/Icon-Product-Right.png" /></a></div>
+                  <div className="sidebar__flex">
+                    <div className="sidebar__card">
+                      {this.state.config &&
+                        this.state.config.mastercards.map(function(card, i) {
+                            return <Add mastercard={card} key={i} id={i} onSelectCard={this.handleCard}/>
+                        }.bind(this))
+                      }
+                    </div>
+                  </div>
                 </div>,
+
               </div>
 
             ]}
@@ -254,7 +261,7 @@ var Builder = React.createClass({
             </div>
 
             <div className={this.state.showToolbar ? "preview-panel toggle" : "preview-panel" }>
-                <Preview data={this.state.data} config={this.state.config} showOrder={this.state.showOrder} toggleLogo={this.state.toggleLogo} />
+                <Preview config={this.state.config} showOrder={this.state.showOrder} toggleLogo={this.state.toggleLogo} />
             </div>
 
           </div>
